@@ -5,9 +5,10 @@
  */
 package p1;
 
-import java.lang.reflect.*;
+import java.lang.reflect.Constructor;
+import java.lang.reflect.Method;
 
-import javax.swing.*;
+import javax.swing.JOptionPane;
 
 /*
  * TestP1.java
@@ -26,11 +27,9 @@ public class TestP1 {
 	}
 
 	public static void main(String[] args) {
-		String menu = "Välj den metod som ska exekveras:\n\n"
-				+ "1.  Test av Uppgift 1a\n" + "2.  Test av Uppgift 1b\n"
-				+ "3.  Test av Uppgift 1c\n" + "4.  Test av Uppgift 1d\n"
-				+ "5.  Test av Uppgift 1e\n" + "6.  Test av Uppgift 1f\n"
-				+ "0.  Avsluta programmet\n\n" + "Ange ditt val";
+		String menu = "Välj den metod som ska exekveras:\n\n" + "1.  Test av Uppgift 1a\n" + "2.  Test av Uppgift 1b\n"
+				+ "3.  Test av Uppgift 1c\n" + "4.  Test av Uppgift 1d\n" + "5.  Test av Uppgift 1e\n"
+				+ "6.  Test av Uppgift 1f\n" + "0.  Avsluta programmet\n\n" + "Ange ditt val";
 		int choice = -1;
 		while (choice != 0) {
 			try {

@@ -1,16 +1,13 @@
 package laboration7;
 
-public class Circle
-{
+public class Circle {
 	private double radius;
-	
-	public void setRadius(double radius)
-	{
+
+	public void setRadius(double radius) {
 		this.radius = radius;
 	}
-	
-	public double getRadius()
-	{
+
+	public double getRadius() {
 		return radius;
 	}
 }

@@ -1,6 +1,5 @@
 package workshop6;
 
-public class Book
-{
-	
+public class Book {
+
 }

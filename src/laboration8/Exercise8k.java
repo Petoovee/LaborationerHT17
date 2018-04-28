@@ -1,6 +1,5 @@
 package laboration8;
 
-public class Exercise8k
-{
-	
+public class Exercise8k {
+
 }

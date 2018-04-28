@@ -1,61 +1,50 @@
 package laboration8;
 
-public class Point
-{
+public class Point {
 	private int x;
 	private int y;
-	
-	public Point(int x, int y)
-	{
+
+	public Point(int x, int y) {
 		this.x = x;
 		this.y = y;
 	}
-	
-	public Point(Point point)
-	{
+
+	public Point(Point point) {
 		this.x = point.getX();
 		this.y = point.getY();
 	}
-	
-	public Point copy()
-	{
+
+	public Point copy() {
 		Point point = new Point(this.x, this.y);
 		return point;
 	}
-	
-	public void setPoint(Point point)
-	{
+
+	public void setPoint(Point point) {
 		this.x = point.getX();
 		this.y = point.getY();
 	}
-	
-	public void setX(int x)
-	{
+
+	public void setX(int x) {
 		this.x = x;
 	}
-	
-	public void setY(int y)
-	{
+
+	public void setY(int y) {
 		this.y = y;
 	}
-	
-	public int getX()
-	{
+
+	public int getX() {
 		return x;
 	}
-	
-	public int getY()
-	{
+
+	public int getY() {
 		return y;
 	}
-	
-	public String toString()
-	{
+
+	public String toString() {
 		return "(" + this.x + "," + this.y + ")";
 	}
-	
-	public static void main(String[] args)
-	{
+
+	public static void main(String[] args) {
 		Point p1 = new Point(10, 12);
 		Point p2 = new Point(20, 15);
 		p1.setPoint(p2);

@@ -1,71 +1,58 @@
 package laboration8;
 
-public class Contact
-{
+public class Contact {
 	private String name;
 	private PhoneNumber phone;
-	
-	public Contact(String name, String home, String mobile, String work)
-	{
+
+	public Contact(String name, String home, String mobile, String work) {
 		this.name = name;
 		this.phone = new PhoneNumber(home, mobile, work);
-//		this.phone.setHome(home);
-//		this.phone.setMobile(mobile);
-//		this.phone.setWork(work);
+		// this.phone.setHome(home);
+		// this.phone.setMobile(mobile);
+		// this.phone.setWork(work);
 	}
 
-	public String getName()
-	{
+	public String getName() {
 		return name;
 	}
 
-	public void setName(String name)
-	{
+	public void setName(String name) {
 		this.name = name;
 	}
-	
-	public void setHome(String home)
-	{
+
+	public void setHome(String home) {
 		this.phone.setHome(home);
 	}
-	
-	public void setMobile(String mobile)
-	{
+
+	public void setMobile(String mobile) {
 		this.phone.setMobile(mobile);
 	}
-	
-	public void setWork(String work)
-	{
+
+	public void setWork(String work) {
 		this.phone.setWork(work);
 	}
 
-	public String getHome()
-	{
+	public String getHome() {
 		return this.phone.getHome();
 	}
-	
-	public String getMobile()
-	{
+
+	public String getMobile() {
 		return this.phone.getMobile();
 	}
-	
-	public String getWork()
-	{
+
+	public String getWork() {
 		return this.phone.getWork();
 	}
-	
-	public PhoneNumber getPhone()
-	{
+
+	public PhoneNumber getPhone() {
 		return phone;
 	}
 
-	public void setPhone(PhoneNumber phone)
-	{
+	public void setPhone(PhoneNumber phone) {
 		this.phone = phone;
 	}
-	
-	public String toString()
-	{
+
+	public String toString() {
 		return this.phone.toString();
 	}
 }

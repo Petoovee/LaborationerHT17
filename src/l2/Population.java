@@ -1,23 +1,23 @@
 package laboration2;
 
 public class Population {
-    private String name;
-    private long inhabitants;
-    
-    public Population( String inName, long inInhabitants ) {
-        this.name = inName;
-        this.inhabitants = inInhabitants;
-    }
+	private String name;
+	private long inhabitants;
 
-    public String getName() {
-        return name;
-    }
+	public Population(String inName, long inInhabitants) {
+		this.name = inName;
+		this.inhabitants = inInhabitants;
+	}
 
-    public long getInhabitants() {
-        return inhabitants;
-    }
-    
-    public String toString() {
-        return name + " " + inhabitants;
-    }
+	public String getName() {
+		return name;
+	}
+
+	public long getInhabitants() {
+		return inhabitants;
+	}
+
+	public String toString() {
+		return name + " " + inhabitants;
+	}
 }

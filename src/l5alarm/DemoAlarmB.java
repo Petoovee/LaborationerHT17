@@ -5,7 +5,7 @@ public class DemoAlarmB {
 		AlarmThreadB bt = new AlarmThreadB(ms);
 		bt.startAlarm();
 	}
-	
+
 	public static void main(String[] args) {
 		DemoAlarmB da = new DemoAlarmB(4000);
 	}

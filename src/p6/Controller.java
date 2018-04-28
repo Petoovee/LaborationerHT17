@@ -11,30 +11,38 @@ public class Controller {
 	private Timer timer;
 	private Random random = new Random();
 	private ColorDisplayDemo demo;
-	private int[][] charA = {{Color.BLUE,Color.BLUE,Color.BLUE,Color.WHITE,Color.BLUE,Color.BLUE,Color.BLUE},
-			{Color.BLUE,Color.BLUE,Color.WHITE,Color.BLUE,Color.WHITE,Color.BLUE,Color.BLUE},
-			{Color.BLUE,Color.BLUE,Color.WHITE,Color.BLUE,Color.WHITE,Color.BLUE,Color.BLUE},
-			{Color.BLUE,Color.BLUE,Color.WHITE,Color.WHITE,Color.WHITE,Color.BLUE,Color.BLUE},
-			{Color.BLUE,Color.WHITE,Color.BLUE,Color.BLUE,Color.BLUE,Color.WHITE,Color.BLUE},
-			{Color.BLUE,Color.WHITE,Color.BLUE,Color.BLUE,Color.BLUE,Color.WHITE,Color.BLUE},
-			{Color.BLUE,Color.WHITE,Color.BLUE,Color.BLUE,Color.BLUE,Color.WHITE,Color.BLUE}};
-	private int[][] charR = {{Color.TRANSPARENT,Color.WHITE,Color.WHITE,Color.WHITE,Color.WHITE,Color.TRANSPARENT,Color.TRANSPARENT},
-			{Color.TRANSPARENT,Color.WHITE,Color.TRANSPARENT,Color.TRANSPARENT,Color.TRANSPARENT,Color.WHITE,Color.TRANSPARENT},
-			{Color.TRANSPARENT,Color.WHITE,Color.TRANSPARENT,Color.TRANSPARENT,Color.TRANSPARENT,Color.WHITE,Color.TRANSPARENT},
-			{Color.TRANSPARENT,Color.WHITE,Color.WHITE,Color.WHITE,Color.WHITE,Color.TRANSPARENT,Color.TRANSPARENT},
-			{Color.TRANSPARENT,Color.WHITE,Color.TRANSPARENT,Color.WHITE,Color.TRANSPARENT,Color.TRANSPARENT,Color.TRANSPARENT},
-			{Color.TRANSPARENT,Color.WHITE,Color.TRANSPARENT,Color.TRANSPARENT,Color.WHITE,Color.TRANSPARENT,Color.TRANSPARENT},
-			{Color.TRANSPARENT,Color.WHITE,Color.TRANSPARENT,Color.TRANSPARENT,Color.TRANSPARENT,Color.WHITE,Color.TRANSPARENT}};
+	private int[][] charA = { { Color.BLUE, Color.BLUE, Color.BLUE, Color.WHITE, Color.BLUE, Color.BLUE, Color.BLUE },
+			{ Color.BLUE, Color.BLUE, Color.WHITE, Color.BLUE, Color.WHITE, Color.BLUE, Color.BLUE },
+			{ Color.BLUE, Color.BLUE, Color.WHITE, Color.BLUE, Color.WHITE, Color.BLUE, Color.BLUE },
+			{ Color.BLUE, Color.BLUE, Color.WHITE, Color.WHITE, Color.WHITE, Color.BLUE, Color.BLUE },
+			{ Color.BLUE, Color.WHITE, Color.BLUE, Color.BLUE, Color.BLUE, Color.WHITE, Color.BLUE },
+			{ Color.BLUE, Color.WHITE, Color.BLUE, Color.BLUE, Color.BLUE, Color.WHITE, Color.BLUE },
+			{ Color.BLUE, Color.WHITE, Color.BLUE, Color.BLUE, Color.BLUE, Color.WHITE, Color.BLUE } };
+	private int[][] charR = {
+			{ Color.TRANSPARENT, Color.WHITE, Color.WHITE, Color.WHITE, Color.WHITE, Color.TRANSPARENT,
+					Color.TRANSPARENT },
+			{ Color.TRANSPARENT, Color.WHITE, Color.TRANSPARENT, Color.TRANSPARENT, Color.TRANSPARENT, Color.WHITE,
+					Color.TRANSPARENT },
+			{ Color.TRANSPARENT, Color.WHITE, Color.TRANSPARENT, Color.TRANSPARENT, Color.TRANSPARENT, Color.WHITE,
+					Color.TRANSPARENT },
+			{ Color.TRANSPARENT, Color.WHITE, Color.WHITE, Color.WHITE, Color.WHITE, Color.TRANSPARENT,
+					Color.TRANSPARENT },
+			{ Color.TRANSPARENT, Color.WHITE, Color.TRANSPARENT, Color.WHITE, Color.TRANSPARENT, Color.TRANSPARENT,
+					Color.TRANSPARENT },
+			{ Color.TRANSPARENT, Color.WHITE, Color.TRANSPARENT, Color.TRANSPARENT, Color.WHITE, Color.TRANSPARENT,
+					Color.TRANSPARENT },
+			{ Color.TRANSPARENT, Color.WHITE, Color.TRANSPARENT, Color.TRANSPARENT, Color.TRANSPARENT, Color.WHITE,
+					Color.TRANSPARENT } };
 	private int[][] stamp = new int[7][7];
-	
+
 	public Controller(ColorDisplayDemo demo) {
 		this.demo = demo;
 		demo.setController(this);
 	}
-	
+
 	private void show(int[][] arr) {
-		for(int row=0; row<stamp.length; row++) {
-			for(int col=0; col<stamp[row].length; col++) {
+		for (int row = 0; row < stamp.length; row++) {
+			for (int col = 0; col < stamp[row].length; col++) {
 				stamp[row][col] = arr[row][col];
 			}
 		}
@@ -48,12 +56,11 @@ public class Controller {
 	public void showR() {
 		show(charR);
 	}
-	
 
 	public void showRandom() {
 		int red, green, blue;
-		for(int row=0; row<stamp.length; row++) {
-			for(int col=0; col<stamp[row].length; col++) {
+		for (int row = 0; row < stamp.length; row++) {
+			for (int col = 0; col < stamp[row].length; col++) {
 				red = random.nextInt(256);
 				green = random.nextInt(256);
 				blue = random.nextInt(256);
@@ -67,22 +74,22 @@ public class Controller {
 		timer = new Timer();
 		demo.enableButtons(false);
 		timer.schedule(new RandomColors(), 500, 500);
-		
+
 	}
-	
+
 	public void fadeOut() {
 		timer = new Timer();
 		demo.enableButtons(false);
 		timer.schedule(new FadeOut(), 20, 20);
 	}
-	
+
 	private void transparency() {
 		int alpha, red, green, blue;
-		for(int row=0; row<stamp.length; row++) {
-			for(int col=0; col<stamp[row].length; col++) {
-				
+		for (int row = 0; row < stamp.length; row++) {
+			for (int col = 0; col < stamp[row].length; col++) {
+
 				alpha = Color.alpha(stamp[row][col]);
-				if(alpha>0)
+				if (alpha > 0)
 					alpha--;
 				red = Color.red(stamp[row][col]);
 				green = Color.green(stamp[row][col]);
@@ -92,11 +99,12 @@ public class Controller {
 		}
 		demo.updateDisplay(stamp);
 	}
-	
+
 	private class RandomColors extends TimerTask {
 		private int counter = 0;
+
 		public void run() {
-			if(counter<10) {
+			if (counter < 10) {
 				counter++;
 				showRandom();
 			} else {
@@ -105,11 +113,12 @@ public class Controller {
 			}
 		}
 	}
-	
+
 	private class FadeOut extends TimerTask {
 		private int counter = 255;
+
 		public void run() {
-			if(counter>=0) {
+			if (counter >= 0) {
 				transparency();
 				counter--;
 			} else {

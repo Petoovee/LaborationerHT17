@@ -1,11 +1,9 @@
 package laboration7;
 
-public class HouseTest
-{
+public class HouseTest {
 	static House house = new House();
-	
-	public static void main(String[] args)
-	{
+
+	public static void main(String[] args) {
 		house.setYear(1998);
 		house.setSize(164);
 		house.setGarden(3);

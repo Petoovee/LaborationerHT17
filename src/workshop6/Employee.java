@@ -1,6 +1,5 @@
 package workshop6;
 
-public class Employee
-{
-	
+public class Employee {
+
 }

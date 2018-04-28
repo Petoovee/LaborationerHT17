@@ -27,9 +27,9 @@ public class Cinema {
 				check += seats[desiredCol][i];
 			}
 
-			if (check <0) {
+			if (check < 0) {
 				System.out.println("In row " + (desiredCol + 1) + " there are seats between seat " + i + " and "
-						+ (i + desiredSeats -1));
+						+ (i + desiredSeats - 1));
 			} else {
 				System.out.println("In row " + (desiredCol + 1) + " there are no seat combination between seat " + i
 						+ " and " + (i + desiredSeats));

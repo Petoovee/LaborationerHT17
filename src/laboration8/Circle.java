@@ -1,43 +1,35 @@
 package laboration8;
 
-public class Circle
-{
+public class Circle {
 	private double radius;
 	private Point position;
-	
-	public Circle(double radius, Point point)
-	{
+
+	public Circle(double radius, Point point) {
 		this.radius = radius;
 		this.position = point.copy();
 	}
-	
-	public void setPosition(Point inPosition)
-	{
+
+	public void setPosition(Point inPosition) {
 		this.position = inPosition;
 	}
-	
-	public double getRadius()
-	{
+
+	public double getRadius() {
 		return this.radius;
 	}
-	
-	public Point getPosition()
-	{
+
+	public Point getPosition() {
 		return this.position.copy();
 	}
-	
-	public int getX()
-	{
+
+	public int getX() {
 		return this.position.getX();
 	}
-	
-	public int getY()
-	{
+
+	public int getY() {
 		return this.position.getY();
 	}
-	
-	public String toString()
-	{
+
+	public String toString() {
 		return "CIRCLE, radius = " + this.radius + ", position = " + position.toString();
 	}
 }

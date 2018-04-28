@@ -1,6 +1,5 @@
 package workshop6;
 
-public class Member
-{
-	
+public class Member {
+
 }

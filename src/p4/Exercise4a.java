@@ -4,27 +4,23 @@ import javax.swing.JOptionPane;
 
 import arrays.IntegerArray;
 
-public class Exercise4a
-{
-	public static int[] parseString(String str)
-	{
+public class Exercise4a {
+	public static int[] parseString(String str) {
 		String[] nbr = str.split(","); // Ex: strängen "13,4,7,9" blir arrayen {"13","4","7","9"}
 		int[] res = new int[nbr.length];
-		for (int i = 0; i < nbr.length; i++)
-		{
+		for (int i = 0; i < nbr.length; i++) {
 			res[i] = Integer.parseInt(nbr[i]);
 		}
 		return res;
 	}
-	
-	public static void main(String[] args)
-	{
+
+	public static void main(String[] args) {
 		String message = "";
 		String str = JOptionPane.showInputDialog(null, "Mata in heltal separerade med komma-tecken",
 				"1,5,3,4,6,5,3,5,9,7,6");
 		int[] test1 = parseString(str);
 		int[] test2;
-		
+
 		message += "Vektor: " + IntegerArray.toString(test1) + "\n";
 		message += "Störst: " + IntegerArray.max(test1) + "\n";
 		message += "Minst: " + IntegerArray.min(test1) + "\n";

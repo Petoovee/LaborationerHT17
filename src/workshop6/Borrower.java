@@ -1,6 +1,5 @@
 package workshop6;
 
-public class Borrower
-{
+public class Borrower {
 	String name, address;
 }

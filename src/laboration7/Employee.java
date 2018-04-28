@@ -1,57 +1,47 @@
 package laboration7;
 
-public class Employee
-{
+public class Employee {
 	private String name, employer;
 	private double wage;
-	
-	public Employee( String name, String employer, double wage )
-	{
-		this.name = name; 
-		this.employer = employer; 
+
+	public Employee(String name, String employer, double wage) {
+		this.name = name;
+		this.employer = employer;
 		this.wage = wage;
 	}
-	
-	public Employee( String name, String employer, int wage )
-	{
-		this.name = name; 
-		this.employer = employer; 
+
+	public Employee(String name, String employer, int wage) {
+		this.name = name;
+		this.employer = employer;
 		this.wage = wage;
 	}
-	
-	public void setName(String name)
-	{
+
+	public void setName(String name) {
 		this.name = name;
 	}
-	
-	public String getName()
-	{
+
+	public String getName() {
 		return name;
 	}
-	
-	public void setEmployer(String employer)
-	{
+
+	public void setEmployer(String employer) {
 		this.employer = employer;
 	}
-	
-	public String getEmployer()
-	{
+
+	public String getEmployer() {
 		return employer;
 	}
-	
-	public void setWage(double wage)
-	{
+
+	public void setWage(double wage) {
 		this.wage = wage;
 	}
-	
-	public double getWage()
-	{
+
+	public double getWage() {
 		return wage;
 	}
-	
-	public String toString()
-	{
-		String toString = "name = " +name +", employer = " +employer +", wage = " +wage;
+
+	public String toString() {
+		String toString = "name = " + name + ", employer = " + employer + ", wage = " + wage;
 		return toString;
 	}
 }

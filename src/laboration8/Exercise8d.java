@@ -1,9 +1,7 @@
 package laboration8;
 
-public class Exercise8d
-{
-	public static void main(String[] args)
-	{
+public class Exercise8d {
+	public static void main(String[] args) {
 		Building building = new Building(5, 1350);
 		Address address = new Address("Nygatan 4", 12345, "Ystad");
 		RealEstate re = new RealEstate("Kvarnen 4", building, address);

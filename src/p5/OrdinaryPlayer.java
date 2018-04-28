@@ -6,58 +6,56 @@ package p5;
  *
  */
 
-public class OrdinaryPlayer extends Player
-{
+public class OrdinaryPlayer extends Player {
 	private Dice dice;
-	
+
 	/**
 	 * Constructs
 	 * 
-	 * @param name Insert name here
+	 * @param name
+	 *            Insert name here
 	 */
-	public OrdinaryPlayer(String name)
-	{
+	public OrdinaryPlayer(String name) {
 		super(name);
 		dice = new SimpleDice();
 	}
-	
+
 	/**
 	 * Constructs
 	 * 
-	 * @param name Insert name here
-	 * @param dice Insert dice here
+	 * @param name
+	 *            Insert name here
+	 * @param dice
+	 *            Insert dice here
 	 */
-	public OrdinaryPlayer(String name, Dice dice)
-	{
+	public OrdinaryPlayer(String name, Dice dice) {
 		super(name);
 		this.dice = dice;
 	}
-	
+
 	/**
 	 * Gets dice
 	 * 
 	 * @return Returns dice
 	 */
-	public Dice getDice()
-	{
+	public Dice getDice() {
 		return dice;
 	}
-	
+
 	/**
 	 * Sets dice
 	 * 
-	 * @param dice Insert dice here
+	 * @param dice
+	 *            Insert dice here
 	 */
-	public void setDice(Dice dice)
-	{
+	public void setDice(Dice dice) {
 		this.dice = dice;
 	}
-	
+
 	/**
 	 * Throws dice
 	 */
-	public int throwDice()
-	{
+	public int throwDice() {
 		return dice.throwDice();
 	}
 }

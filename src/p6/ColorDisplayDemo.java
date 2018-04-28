@@ -16,7 +16,7 @@ public class ColorDisplayDemo extends JPanel {
 	private JButton btnRandomColors = new JButton("Slumpa");
 	private JButton btnTimer = new JButton("Timer");
 	private JButton btnFadeOut = new JButton("Genomskinlig");
-	
+
 	public ColorDisplayDemo(int background, int grid) {
 		ButtonListener bl = new ButtonListener();
 		setLayout(new BorderLayout());
@@ -31,7 +31,7 @@ public class ColorDisplayDemo extends JPanel {
 	}
 
 	private JPanel buttonPanel() {
-		JPanel panel = new JPanel(new GridLayout(1,5));
+		JPanel panel = new JPanel(new GridLayout(1, 5));
 		panel.add(btnR);
 		panel.add(btnA);
 		panel.add(btnRandomColors);
@@ -39,7 +39,7 @@ public class ColorDisplayDemo extends JPanel {
 		panel.add(btnFadeOut);
 		return panel;
 	}
-	
+
 	public void setController(Controller controller) {
 		this.controller = controller;
 	}
@@ -56,20 +56,20 @@ public class ColorDisplayDemo extends JPanel {
 		display.setDisplay(colors);
 		display.updateDisplay();
 	}
-	
+
 	private class ButtonListener implements ActionListener {
 		public void actionPerformed(ActionEvent e) {
-			if(e.getSource()==btnR) {
+			if (e.getSource() == btnR) {
 				controller.showR();
-			} else if(e.getSource()==btnA) {
+			} else if (e.getSource() == btnA) {
 				controller.showA();
-			}else if(e.getSource()==btnRandomColors) {
+			} else if (e.getSource() == btnRandomColors) {
 				controller.showRandom();
-			} else if(e.getSource()==btnTimer) {
+			} else if (e.getSource() == btnTimer) {
 				controller.useTimer();
-			} else if(e.getSource()==btnFadeOut) {
+			} else if (e.getSource() == btnFadeOut) {
 				controller.fadeOut();
 			}
-		}		
+		}
 	}
 }
