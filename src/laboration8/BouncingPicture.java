@@ -22,8 +22,7 @@ public class BouncingPicture {
 		this.picture.setDy(dy);
 	}
 
-	public void showPicture()
-	{
-		this.window.show
+	public void showPicture() {
+		this.window.show();
 	}
 }
