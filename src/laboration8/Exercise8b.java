@@ -1,6 +1,6 @@
 package laboration8;
 
-public class ContactTest {
+public class Exercise8b {
 	public static void main(String[] args) {
 
 		// 8B
