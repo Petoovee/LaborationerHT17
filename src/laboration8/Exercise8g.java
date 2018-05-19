@@ -2,8 +2,6 @@ package laboration8;
 
 public class Exercise8g {
 	public static void main(String[] args) {
-		
-		// The value in c1 is never changed so I don't get the same result as the document wants me to
 		Point p1, p2;
 		p1 = new Point(10, 12);
 		Circle c1 = new Circle(3.5, p1);
@@ -17,9 +15,9 @@ public class Exercise8g {
 		System.out.println("p2 = " + p2.toString());
 		
 		/*
-		 *  A) It doesn't?
+		 *  A) It doesn't, because I've already done Exercise8k
 		 *  
-		 *  B) Didn't change the circle either?
+		 *  B) Didn't change the circle either, because Exercise8k
 		 */
 	}
 }
