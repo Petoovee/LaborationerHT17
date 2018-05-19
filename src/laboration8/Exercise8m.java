@@ -13,7 +13,7 @@ public class Exercise8m {
 		ImageIcon image3 = new ImageIcon("images/gubbe.jpg");
 
 		window = new PaintWindow(image1);
-		window.setTitle("Uppgift 7m");
+		window.setTitle("Uppgift 8m");
 
 		int width = window.getBackgroundWidth();
 		int height = window.getBackgroundHeight();

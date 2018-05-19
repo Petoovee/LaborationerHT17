@@ -13,7 +13,7 @@ public class Exercise8e {
 		System.out.println("------------------------------");
 		re.setName("Skorpionen 17");
 		re.setBuilding(new Building(6, 1470));
-		;
+
 		re.setAddress(new Address("Nygatan 4", 55555, "Ystad"));
 		System.out.println(re.toString());
 	}
