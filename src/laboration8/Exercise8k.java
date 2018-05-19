@@ -13,5 +13,7 @@ public class Exercise8k {
 		System.out.println("p1 = " + p1.toString());
 		System.out.println("c1 = " + c1.toString());
 		System.out.println("p2 = " + p2.toString());
+		
+		// Because we no longer return the reference, but instead we produce a new variable with the same contents
 	}
 }
