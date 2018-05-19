@@ -4,7 +4,7 @@ import java.awt.Color;
 
 import javax.swing.ImageIcon;
 
-import laboration6.PaintWindow;
+import laboration8.PaintWindow;
 
 public class Exercise8n {
 	private PaintWindow window;
@@ -18,7 +18,7 @@ public class Exercise8n {
 		ImageIcon image3 = new ImageIcon("images/gubbe.jpg");
 
 		window = new PaintWindow(image1);
-		window.setTitle("Uppgift 8m");
+		window.setTitle("Uppgift 8n");
 
 		int width = window.getBackgroundWidth();
 		int height = window.getBackgroundHeight();
