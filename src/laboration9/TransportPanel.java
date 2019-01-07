@@ -18,7 +18,7 @@ public class TransportPanel extends JPanel implements ActionListener {
 	private Font fontButtons = new Font("SansSerif", Font.PLAIN, 18); // Checkboxes
 
 	// Initiate labels
-	JLabel lbl1 = new JLabel("   How do you haul ass?");
+	JLabel lbl1 = new JLabel("   How do you haul ass to school");
 	JLabel lbl2 = new JLabel(" ");
 
 	// Initiate checkboxes
@@ -26,11 +26,12 @@ public class TransportPanel extends JPanel implements ActionListener {
 	JCheckBox cbTrain = new JCheckBox("Smelly train");
 	JCheckBox cbBus = new JCheckBox("3rd world bus");
 	JCheckBox cbBike = new JCheckBox("Tricycle");
-	JCheckBox cbWalk = new JCheckBox("Like a neanderthal");
+	JCheckBox cbWalk = new JCheckBox("By walking");
 
 	public TransportPanel() {
 		// Configure windows
 		setPreferredSize(new Dimension(550, 100));
+		setBackground(Color.CYAN);
 
 		// Configure labels
 		lbl1.setPreferredSize(new Dimension(550, 20));
@@ -59,23 +60,33 @@ public class TransportPanel extends JPanel implements ActionListener {
 	}
 
 	public void actionPerformed(ActionEvent e) {
-		String str = "   You";
-		if (cbCar.isSelected() == true) {
-			str += " drive,";
+		String str = "   ";
+		if (cbCar.isSelected() || cbTrain.isSelected() || cbBus.isSelected() || cbBike.isSelected() || cbWalk.isSelected()) {
+			str += "You";
+			if (cbCar.isSelected()) {
+				str += " drive,";
+			}
+			if (cbTrain.isSelected()) {
+				str += " take a train,";
+			}
+			if (cbBus.isSelected()) {
+				str += " take a bus,";
+			}
+			if (cbBike.isSelected()) {
+				str += " bicycle,";
+			}
+			if (cbWalk.isSelected()) {
+				str += " walk,";
+			}
+			// Remove the last comma in the string
+			str = str.substring(0, str.length()-1);
+			
+			// If we have more than one selection, replace the second last comma with " and"
+			if(str.lastIndexOf(",") > -1) {
+				str = str.substring(0, str.lastIndexOf(",")) + " and" + str.substring(str.lastIndexOf(",")+1, str.length());
+			}
+			str += " to school";
 		}
-		if (cbTrain.isSelected() == true) {
-			str += " take the train,";
-		}
-		if (cbBus.isSelected() == true) {
-			str += " taketh thy bus,";
-		}
-		if (cbBike.isSelected() == true) {
-			str += " pedal,";
-		}
-		if (cbWalk.isSelected() == true) {
-			str += " walk";
-		}
-		str += " to school";
 		lbl2.setText(str);
 		add(lbl2);
 	}

@@ -12,7 +12,7 @@ public class Exercise8g {
 		p2.setX(333);
 		System.out.println("p1 = " + p1.toString());
 		System.out.println("c1 = " + c1.toString());
-		System.out.println("p2 = " + p2.toString()); // Typo in document? Or should it be p1.toString()?
+		System.out.println("p2 = " + p2.toString());
 		
 		/*
 		 *  A) It doesn't, because I've already done Exercise8k
